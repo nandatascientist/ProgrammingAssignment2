@@ -65,4 +65,13 @@ cacheSolve <- function(x, ...) {
         x$setmatrixinv(computedinv)
         computedinv
         
+        
 }
+
+
+## The program that will need the matrix inverse computed will first
+## call makeCacheMatrix with the actual matrix for which inverse is desired.
+## makeCacheMatrix will return a function object as described above. 
+## The calling program  will then invoke cachesolve with the output of 
+## cacheSolve (i.e. with the function object)
+
